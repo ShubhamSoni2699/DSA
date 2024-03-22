@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="DSA" Database="" Version="10000">
+  <Project Name="JaggredArray" Path="JaggredArray/JaggredArray.project" Active="No"/>
+  <Project Name="FastExponentiation" Path="FastExponentiation/FastExponentiation.project" Active="No"/>
+  <Project Name="BubbleSort" Path="BubbleSort/BubbleSort.project" Active="No"/>
+  <Project Name="SelectionSort" Path="SelectionSort/SelectionSort.project" Active="No"/>
+  <Project Name="InsertionSort" Path="InsertionSort/InsertionSort.project" Active="No"/>
+  <Project Name="MergeSort" Path="MergeSort/MergeSort.project" Active="No"/>
+  <Project Name="InversionCount" Path="InversionCount/InversionCount.project" Active="No"/>
+  <Project Name="QuickSort" Path="QuickSort/QuickSort.project" Active="No"/>
+  <Project Name="Subsets" Path="Subsets/Subsets.project" Active="No"/>
+  <Project Name="SubsequenceOfString" Path="SubsequenceOfString/SubsequenceOfString.project" Active="No"/>
+  <Project Name="PhoneKeyPadProblem" Path="PhoneKeyPadProblem/PhoneKeyPadProblem.project" Active="No"/>
+  <Project Name="PermutationsOfString" Path="PermutationsOfString/PermutationsOfString.project" Active="No"/>
+  <Project Name="PascalTriangle" Path="PascalTriangle/PascalTriangle.project" Active="No"/>
+  <Project Name="RatInAMaze" Path="RatInAMaze/RatInAMaze.project" Active="No"/>
+  <Project Name="LinkedList" Path="LinkedList/LinkedList.project" Active="No"/>
+  <Project Name="Stack" Path="Stack/Stack.project" Active="No"/>
+  <Project Name="NStacksInAnArray" Path="NStacksInAnArray/NStacksInAnArray.project" Active="No"/>
+  <Project Name="Queue" Path="Queue/Queue.project" Active="No"/>
+  <Project Name="Calculator" Path="Calculator/Calculator.project" Active="No"/>
+  <Project Name="BinaryTree" Path="BinaryTree/BinaryTree.project" Active="No"/>
+  <Project Name="BinarySearchTree" Path="BinarySearchTree/BinarySearchTree.project" Active="Yes"/>
+  <Project Name="Heap" Path="Heap/Heap.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug">
+      <Environment/>
+      <Project Name="JaggredArray" ConfigName="Debug"/>
+      <Project Name="FastExponentiation" ConfigName="Debug"/>
+      <Project Name="BubbleSort" ConfigName="Debug"/>
+      <Project Name="SelectionSort" ConfigName="Debug"/>
+      <Project Name="InsertionSort" ConfigName="Debug"/>
+      <Project Name="MergeSort" ConfigName="Debug"/>
+      <Project Name="InversionCount" ConfigName="Debug"/>
+      <Project Name="QuickSort" ConfigName="Debug"/>
+      <Project Name="Subsets" ConfigName="Debug"/>
+      <Project Name="SubsequenceOfString" ConfigName="Debug"/>
+      <Project Name="PhoneKeyPadProblem" ConfigName="Debug"/>
+      <Project Name="PermutationsOfString" ConfigName="Debug"/>
+      <Project Name="PascalTriangle" ConfigName="Debug"/>
+      <Project Name="RatInAMaze" ConfigName="Debug"/>
+      <Project Name="LinkedList" ConfigName="Debug"/>
+      <Project Name="Stack" ConfigName="Debug"/>
+      <Project Name="NStacksInAnArray" ConfigName="Debug"/>
+      <Project Name="Queue" ConfigName="Debug"/>
+      <Project Name="Calculator" ConfigName="Debug"/>
+      <Project Name="BinaryTree" ConfigName="Debug"/>
+      <Project Name="BinarySearchTree" ConfigName="Debug"/>
+      <Project Name="Heap" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release">
+      <Environment/>
+      <Project Name="JaggredArray" ConfigName="Release"/>
+      <Project Name="FastExponentiation" ConfigName="Release"/>
+      <Project Name="BubbleSort" ConfigName="Release"/>
+      <Project Name="SelectionSort" ConfigName="Release"/>
+      <Project Name="InsertionSort" ConfigName="Release"/>
+      <Project Name="MergeSort" ConfigName="Release"/>
+      <Project Name="InversionCount" ConfigName="Release"/>
+      <Project Name="QuickSort" ConfigName="Release"/>
+      <Project Name="Subsets" ConfigName="Release"/>
+      <Project Name="SubsequenceOfString" ConfigName="Release"/>
+      <Project Name="PhoneKeyPadProblem" ConfigName="Release"/>
+      <Project Name="PermutationsOfString" ConfigName="Release"/>
+      <Project Name="PascalTriangle" ConfigName="Release"/>
+      <Project Name="RatInAMaze" ConfigName="Release"/>
+      <Project Name="LinkedList" ConfigName="Release"/>
+      <Project Name="Stack" ConfigName="Release"/>
+      <Project Name="NStacksInAnArray" ConfigName="Release"/>
+      <Project Name="Queue" ConfigName="Release"/>
+      <Project Name="Calculator" ConfigName="Release"/>
+      <Project Name="BinaryTree" ConfigName="Release"/>
+      <Project Name="BinarySearchTree" ConfigName="Release"/>
+      <Project Name="Heap" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
