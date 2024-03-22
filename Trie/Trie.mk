@@ -3,12 +3,12 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=InsertionSort
+ProjectName            :=Trie
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
 WorkspacePath          :=D:/Programming/C++/DSA/DSA
-ProjectPath            :=D:/Programming/C++/DSA/DSA/InsertionSort
-IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/InsertionSort
+ProjectPath            :=D:/Programming/C++/DSA/DSA/Trie
+IntermediateDirectory  :=../build-$(WorkspaceConfiguration)/Trie
 OutDir                 :=$(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
@@ -64,7 +64,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Trie.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
 
 
 
@@ -95,8 +95,13 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/Trie.cpp$(ObjectSuffix): Trie.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Trie/Trie.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Trie.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Trie.cpp$(PreprocessSuffix): Trie.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Trie.cpp$(PreprocessSuffix) Trie.cpp
+
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/InsertionSort/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Trie/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 

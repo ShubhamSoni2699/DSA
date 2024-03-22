@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=shubh
-Date                   :=29/01/2024
+Date                   :=22/03/2024
 CodeLitePath           :="C:/Program Files/CodeLite"
 MakeDirCommand         :=mkdir
 LinkerName             :=C:/mingw64/bin/g++.exe
@@ -64,7 +64,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/queue.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/queue.cpp$(ObjectSuffix) 
 
 
 
@@ -95,15 +95,15 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/queue.cpp$(ObjectSuffix): queue.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Queue/queue.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/queue.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/queue.cpp$(PreprocessSuffix): queue.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/queue.cpp$(PreprocessSuffix) queue.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Queue/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/queue.cpp$(ObjectSuffix): queue.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Queue/queue.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/queue.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/queue.cpp$(PreprocessSuffix): queue.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/queue.cpp$(PreprocessSuffix) queue.cpp
 
 ##
 ## Clean

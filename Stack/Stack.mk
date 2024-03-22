@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=shubh
-Date                   :=22/01/2024
+Date                   :=22/03/2024
 CodeLitePath           :="C:/Program Files/CodeLite"
 MakeDirCommand         :=mkdir
 LinkerName             :=C:/mingw64/bin/g++.exe
@@ -64,7 +64,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/stack.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/stack.cpp$(ObjectSuffix) 
 
 
 
@@ -95,15 +95,15 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/stack.cpp$(ObjectSuffix): stack.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Stack/stack.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/stack.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/stack.cpp$(PreprocessSuffix): stack.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/stack.cpp$(PreprocessSuffix) stack.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Stack/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/stack.cpp$(ObjectSuffix): stack.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Stack/stack.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/stack.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/stack.cpp$(PreprocessSuffix): stack.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/stack.cpp$(PreprocessSuffix) stack.cpp
 
 ##
 ## Clean

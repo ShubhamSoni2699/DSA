@@ -20,8 +20,9 @@
   <Project Name="Queue" Path="Queue/Queue.project" Active="No"/>
   <Project Name="Calculator" Path="Calculator/Calculator.project" Active="No"/>
   <Project Name="BinaryTree" Path="BinaryTree/BinaryTree.project" Active="No"/>
-  <Project Name="BinarySearchTree" Path="BinarySearchTree/BinarySearchTree.project" Active="Yes"/>
+  <Project Name="BinarySearchTree" Path="BinarySearchTree/BinarySearchTree.project" Active="No"/>
   <Project Name="Heap" Path="Heap/Heap.project" Active="No"/>
+  <Project Name="Trie" Path="Trie/Trie.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -47,6 +48,7 @@
       <Project Name="BinaryTree" ConfigName="Debug"/>
       <Project Name="BinarySearchTree" ConfigName="Debug"/>
       <Project Name="Heap" ConfigName="Debug"/>
+      <Project Name="Trie" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -72,6 +74,7 @@
       <Project Name="BinaryTree" ConfigName="Release"/>
       <Project Name="BinarySearchTree" ConfigName="Release"/>
       <Project Name="Heap" ConfigName="Release"/>
+      <Project Name="Trie" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

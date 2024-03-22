@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=shubh
-Date                   :=30/01/2024
+Date                   :=22/03/2024
 CodeLitePath           :="C:/Program Files/CodeLite"
 MakeDirCommand         :=mkdir
 LinkerName             :=C:/mingw64/bin/g++.exe
@@ -64,7 +64,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/nStacksInAnArray.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/nStacksInAnArray.cpp$(ObjectSuffix) 
 
 
 
@@ -95,15 +95,15 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/nStacksInAnArray.cpp$(ObjectSuffix): nStacksInAnArray.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/NStacksInAnArray/nStacksInAnArray.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/nStacksInAnArray.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/nStacksInAnArray.cpp$(PreprocessSuffix): nStacksInAnArray.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/nStacksInAnArray.cpp$(PreprocessSuffix) nStacksInAnArray.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/NStacksInAnArray/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/nStacksInAnArray.cpp$(ObjectSuffix): nStacksInAnArray.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/NStacksInAnArray/nStacksInAnArray.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/nStacksInAnArray.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/nStacksInAnArray.cpp$(PreprocessSuffix): nStacksInAnArray.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/nStacksInAnArray.cpp$(PreprocessSuffix) nStacksInAnArray.cpp
 
 ##
 ## Clean

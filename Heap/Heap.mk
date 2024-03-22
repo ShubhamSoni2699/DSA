@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=shubh
-Date                   :=15/03/2024
+Date                   :=22/03/2024
 CodeLitePath           :="C:/Program Files/CodeLite"
 MakeDirCommand         :=mkdir
 LinkerName             :=C:/mingw64/bin/g++.exe
@@ -64,7 +64,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Heap.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Heap.cpp$(ObjectSuffix) 
 
 
 
@@ -95,15 +95,15 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/Heap.cpp$(ObjectSuffix): Heap.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Heap/Heap.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Heap.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Heap.cpp$(PreprocessSuffix): Heap.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Heap.cpp$(PreprocessSuffix) Heap.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Heap/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/Heap.cpp$(ObjectSuffix): Heap.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/Programming/C++/DSA/DSA/Heap/Heap.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Heap.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Heap.cpp$(PreprocessSuffix): Heap.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Heap.cpp$(PreprocessSuffix) Heap.cpp
 
 ##
 ## Clean
