@@ -51,3 +51,8 @@ _deps
 .codelite/
 
 build-Debug/
+
+.clang-format
+.clangd
+
+*.mk
