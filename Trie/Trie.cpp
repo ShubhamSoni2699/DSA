@@ -66,4 +66,26 @@ class Trie {
 		bool search(string word){
 			return searchUtil(root,word);
 		}
+		
+	private:
+		void removeUtil(TrieNode* root ,string word){
+			if(root->isTerminal){
+				root->isTerminal = false;
+				return;
+			}
+			int index = word[0]-'A';
+			TrieNode* child = nullptr;
+			
+			if(root->children[index]!=nullptr){
+				child = root->children[index];
+			}else{
+				return;
+			}
+			removeUtil(child , word.substr(1));
+		}
+	
+	public:
+		void remove(string word){
+			removeUtil(root,word);
+		}
 };
