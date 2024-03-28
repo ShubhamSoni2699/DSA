@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
 	nQueen q;
-	q.printAllPossibleSol(5);
+	q.printAllPossibleSol(4);
 	
 	cout<<endl<<endl;
 	
