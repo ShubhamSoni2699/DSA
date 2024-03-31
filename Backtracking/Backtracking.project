@@ -3,6 +3,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="SudokuSolver.cpp"/>
     <File Name="NQueenProblem.cpp"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
