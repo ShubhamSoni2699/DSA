@@ -23,7 +23,8 @@
   <Project Name="BinarySearchTree" Path="BinarySearchTree/BinarySearchTree.project" Active="No"/>
   <Project Name="Heap" Path="Heap/Heap.project" Active="No"/>
   <Project Name="Trie" Path="Trie/Trie.project" Active="No"/>
-  <Project Name="Backtracking" Path="Backtracking/Backtracking.project" Active="Yes"/>
+  <Project Name="Backtracking" Path="Backtracking/Backtracking.project" Active="No"/>
+  <Project Name="Graph" Path="Graph/Graph.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -51,6 +52,7 @@
       <Project Name="Heap" ConfigName="Debug"/>
       <Project Name="Trie" ConfigName="Debug"/>
       <Project Name="Backtracking" ConfigName="Debug"/>
+      <Project Name="Graph" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -78,6 +80,7 @@
       <Project Name="Heap" ConfigName="Release"/>
       <Project Name="Trie" ConfigName="Release"/>
       <Project Name="Backtracking" ConfigName="Release"/>
+      <Project Name="Graph" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
