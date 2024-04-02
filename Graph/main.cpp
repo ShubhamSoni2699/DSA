@@ -18,6 +18,8 @@ int main(){
 	}
 	
 	g.printGraph();
+	g.bfs();
+	
 	
 	return 0;
 }

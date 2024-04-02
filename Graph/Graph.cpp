@@ -1,5 +1,6 @@
 #include <unordered_map>
 #include <vector>
+#include <queue>
 #include <iostream>
 
 using namespace std;
@@ -23,5 +24,25 @@ class graph{
 				}
 				cout<<endl;
 			}
+		}
+		
+		void bfs(){
+			queue<int> q;
+			unordered_map<int,bool> isVisited;
+			q.push(0);
+			
+			while(!q.empty()){
+				int fNode = q.front();
+				q.pop();
+				cout<<fNode<<" ";
+				isVisited[fNode] = true;
+				
+				for(auto i: adjList[fNode]){
+					if(!isVisited[i]){
+						q.push(i);
+					}
+				}
+			}
+			cout<<endl;
 		}
 };
