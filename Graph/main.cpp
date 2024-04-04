@@ -18,7 +18,10 @@ int main(){
 	}
 	
 	g.printGraph();
+	cout<<endl;
 	g.bfs();
+	cout<<endl;
+	g.dfs();
 	
 	
 	return 0;
