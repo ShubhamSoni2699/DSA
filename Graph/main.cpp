@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-	graph g;
+	graph g(true);
 	cout<<"Enter no of nodes :-"<<endl;
 	int m,n = 0;
 	cin>>n;

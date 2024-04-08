@@ -8,6 +8,7 @@ using namespace std;
 class graph{
 	private:
 		unordered_map<int,vector<int>> adjList;
+		bool isDirected ;
 		void depthFirstSearch(unordered_map<int,bool>& isVisited,int node){
 			if(!isVisited[node]){
 				cout<<node<<" ";
@@ -32,7 +33,12 @@ class graph{
 			return false;
 		}
 	public:
-		void addEdges(int u , int v , bool isDirected = false){
+		
+		graph(bool isDirected = false){
+			this->isDirected = isDirected;
+		}
+		
+		void addEdges(int u , int v ){
 			adjList[u].push_back(v);
 			if(!isDirected){
 				adjList[v].push_back(u);
