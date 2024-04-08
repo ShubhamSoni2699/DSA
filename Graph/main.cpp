@@ -23,7 +23,9 @@ int main(){
 	//cout<<endl;
 	//g.dfs();
 
-	cout<<g.isCyclicBFS()<<endl;
+	cout<<"is cycle bfs :"<<g.isCyclicBFS()<<endl;
+	
+	cout<<"is cycle dfs :"<<g.isCyclicDFS()<<endl;
 	
 	return 0;
 }

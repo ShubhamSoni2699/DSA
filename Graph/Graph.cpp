@@ -17,6 +17,20 @@ class graph{
 				}
 			}
 		}
+		bool isCDFS(int node , int parent , unordered_map<int,bool> &isVisited){
+			isVisited[node] = true;
+			
+			for(auto neighbour: adjList[node]){
+				if(!isVisited[neighbour]){
+					bool isCyclic = isCDFS(neighbour , node , isVisited);
+					if(isCyclic)
+						return true;
+				}else if(neighbour!=parent){
+					return true;
+				}
+			}
+			return false;
+		}
 	public:
 		void addEdges(int u , int v , bool isDirected = false){
 			adjList[u].push_back(v);
@@ -86,5 +100,10 @@ class graph{
 				}
 			}
 			return false;
+		}
+		
+		bool isCyclicDFS(){
+			unordered_map<int,bool> isVisited;
+			return isCDFS(0,-1,isVisited);
 		}
 };
