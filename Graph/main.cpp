@@ -19,10 +19,11 @@ int main(){
 	
 	g.printGraph();
 	cout<<endl;
-	g.bfs();
-	cout<<endl;
-	g.dfs();
-	
+	//g.bfs();
+	//cout<<endl;
+	//g.dfs();
+
+	cout<<g.isCyclicBFS()<<endl;
 	
 	return 0;
 }

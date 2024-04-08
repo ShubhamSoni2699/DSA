@@ -60,4 +60,31 @@ class graph{
 			depthFirstSearch(isVisited , 0);
 			cout<<endl;
 		}
+		
+		bool isCyclicBFS(){
+			unordered_map<int,bool> isVisited;
+			unordered_map<int,int> parent;
+			
+			queue<int> q;
+			
+			q.push(0);
+			isVisited[0] = true;
+			parent[0] = -1;
+			
+			while(!q.empty()){
+				int front = q.front();
+				q.pop();
+				
+				for(auto neighbour: adjList[front]){
+					if(isVisited[neighbour] && neighbour != parent[front]){
+						return true;
+					}else if(!isVisited[neighbour]){
+						q.push(neighbour);
+						isVisited[neighbour] = true;
+						parent[neighbour] = front;
+					}
+				}
+			}
+			return false;
+		}
 };
