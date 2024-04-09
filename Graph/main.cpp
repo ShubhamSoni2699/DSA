@@ -3,7 +3,9 @@
 using namespace std;
 
 int main(){
-	graph g(true);
+	graph directedGraph(true);
+	graph unDirectedGraph;
+	
 	cout<<"Enter no of nodes :-"<<endl;
 	int m,n = 0;
 	cin>>n;
@@ -14,18 +16,21 @@ int main(){
 		cout<<"u,v :-";
 		int u,v = 0;
 		cin>>u>>v;
-		g.addEdges(u,v);
+		directedGraph.addEdges(u,v);
+		unDirectedGraph.addEdges(u,v);
 	}
 	
-	g.printGraph();
+	directedGraph.printGraph();
 	cout<<endl;
 	//g.bfs();
 	//cout<<endl;
 	//g.dfs();
-
-	cout<<"is cycle bfs :"<<g.isCyclicBFS()<<endl;
 	
-	cout<<"is cycle dfs :"<<g.isCyclicDFS()<<endl;
+	unDirectedGraph.printGraph();
+	cout<<endl;
+
+	cout<<"is cycle dfs direct:"<<directedGraph.isCyclicDFS()<<endl;
+	cout<<"is cycle dfs undirect:"<<unDirectedGraph.isCyclicDFS()<<endl;
 	
 	return 0;
 }

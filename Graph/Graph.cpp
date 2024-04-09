@@ -18,20 +18,34 @@ class graph{
 				}
 			}
 		}
-		bool isCDFS(int node , int parent , unordered_map<int,bool> &isVisited){
+		bool isCDFS(int node , int parent , unordered_map<int,bool> &isVisited ,unordered_map<int,bool> &dfsVisited){
 			isVisited[node] = true;
+			
+			if(isDirected)
+				dfsVisited[node] = true;
 			
 			for(auto neighbour: adjList[node]){
 				if(!isVisited[neighbour]){
-					bool isCyclic = isCDFS(neighbour , node , isVisited);
+					bool isCyclic = isCDFS(neighbour , node , isVisited,dfsVisited);
 					if(isCyclic)
 						return true;
-				}else if(neighbour!=parent){
-					return true;
+				}else{
+					if(!isDirected){
+						if(neighbour!=parent){
+							return true;
+						}
+					}else{
+						if(dfsVisited[neighbour]){
+							return true;
+						}
+					}
 				}
 			}
+			if(isDirected)
+				dfsVisited[node] = false;
 			return false;
 		}
+			
 	public:
 		
 		graph(bool isDirected = false){
@@ -110,6 +124,7 @@ class graph{
 		
 		bool isCyclicDFS(){
 			unordered_map<int,bool> isVisited;
-			return isCDFS(0,-1,isVisited);
+			unordered_map<int,bool> dfsVisited;
+			return isCDFS(0,-1,isVisited,dfsVisited);
 		}
 };
