@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
 	graph directedGraph(true);
-	graph unDirectedGraph;
+	//graph unDirectedGraph;
 	
 	cout<<"Enter no of nodes :-"<<endl;
 	int m,n = 0;
@@ -17,8 +17,10 @@ int main(){
 		int u,v = 0;
 		cin>>u>>v;
 		directedGraph.addEdges(u,v);
-		unDirectedGraph.addEdges(u,v);
+		//unDirectedGraph.addEdges(u,v);
 	}
+	
+	cout<<endl;
 	
 	directedGraph.printGraph();
 	cout<<endl;
@@ -26,11 +28,18 @@ int main(){
 	//cout<<endl;
 	//g.dfs();
 	
-	unDirectedGraph.printGraph();
-	cout<<endl;
+	//unDirectedGraph.printGraph();
+	//cout<<endl;
 
-	cout<<"is cycle dfs direct:"<<directedGraph.isCyclicDFS()<<endl;
-	cout<<"is cycle dfs undirect:"<<unDirectedGraph.isCyclicDFS()<<endl;
+	//cout<<"is cycle dfs direct:"<<directedGraph.isCyclicDFS()<<endl;
+	//cout<<"is cycle dfs undirect:"<<unDirectedGraph.isCyclicDFS()<<endl;
+	
+	vector<int>topSort = directedGraph.topologicalSortDFS();
+	
+	for(auto i:topSort){
+		cout<<i<<" ";
+	}
+	cout<<endl;
 	
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include <unordered_map>
 #include <vector>
 #include <queue>
+#include <stack>
 #include <iostream>
 
 using namespace std;
@@ -44,6 +45,16 @@ class graph{
 			if(isDirected)
 				dfsVisited[node] = false;
 			return false;
+		}
+		
+		void topSortDFS(int node,unordered_map<int,bool>&isVisited , stack<int>&st){
+			isVisited[node] = true;
+			for(auto neighbour:adjList[node]){
+				if(!isVisited[neighbour]){
+					topSortDFS(neighbour,isVisited,st);
+				}
+			}
+			st.push(node);
 		}
 			
 	public:
@@ -126,5 +137,21 @@ class graph{
 			unordered_map<int,bool> isVisited;
 			unordered_map<int,bool> dfsVisited;
 			return isCDFS(0,-1,isVisited,dfsVisited);
+		}
+		
+		vector<int> topologicalSortDFS(){
+			vector<int>ans;
+			if(!isDirected)
+				return ans;
+			unordered_map<int,bool> isVisited;
+			stack<int>st;
+			
+			topSortDFS(0,isVisited,st);
+			
+			while(!st.empty()){
+				ans.push_back(st.top());
+				st.pop();
+			}
+			return ans;
 		}
 };
