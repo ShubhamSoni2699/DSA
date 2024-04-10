@@ -193,4 +193,44 @@ class graph{
 			}
 			return ans;
 		}
+		
+		bool isCyclicDirectedBFS(){
+			if(!isDirected)
+				return isCyclicBFS();
+				
+			vector<int>indegree(nodes,0);
+			queue<int>q;
+			
+			int countNode = 0;
+			
+			for(auto map : adjList){
+				for(auto neighbour : map.second){
+					indegree[neighbour]++;
+				}
+			}
+			
+			for(int i= 0 ; i<nodes ; i++){
+				if(indegree[i]==0){
+					q.push(i);
+				}
+			}
+			
+			while(!q.empty()){
+				int front = q.front();
+				q.pop();
+				countNode++;
+				
+				for(auto neighbour:adjList[front]){
+					indegree[neighbour]--;
+					if(indegree[neighbour]==0){
+						q.push(neighbour);
+					}
+				}
+				
+			}
+			if(countNode == nodes){
+				return false;
+			}
+			return true;
+		}
 };
