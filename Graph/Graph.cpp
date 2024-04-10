@@ -9,6 +9,8 @@ using namespace std;
 class graph{
 	private:
 		unordered_map<int,vector<int>> adjList;
+		int nodes;
+		
 		bool isDirected ;
 		void depthFirstSearch(unordered_map<int,bool>& isVisited,int node){
 			if(!isVisited[node]){
@@ -59,8 +61,9 @@ class graph{
 			
 	public:
 		
-		graph(bool isDirected = false){
+		graph(bool isDirected = false , int nodes = 0){
 			this->isDirected = isDirected;
+			this->nodes = nodes;
 		}
 		
 		void addEdges(int u , int v ){
@@ -151,6 +154,42 @@ class graph{
 			while(!st.empty()){
 				ans.push_back(st.top());
 				st.pop();
+			}
+			return ans;
+		}
+		
+		vector<int> topologicalSortBFS(){
+			vector<int> ans;
+			if(!isDirected)
+				return ans;
+				
+			vector<int>indegree(nodes,0);
+			queue<int>q;
+			
+			for(auto map : adjList){
+				for(auto neighbour : map.second){
+					indegree[neighbour]++;
+				}
+			}
+			
+			for(int i= 0 ; i<nodes ; i++){
+				if(indegree[i]==0){
+					q.push(i);
+				}
+			}
+			
+			while(!q.empty()){
+				int front = q.front();
+				q.pop();
+				ans.push_back(front);
+				
+				for(auto neighbour:adjList[front]){
+					indegree[neighbour]--;
+					if(indegree[neighbour]==0){
+						q.push(neighbour);
+					}
+				}
+				
 			}
 			return ans;
 		}
