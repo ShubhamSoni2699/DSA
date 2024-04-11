@@ -10,26 +10,26 @@ int main(){
 	cout<<"Enter no of edges :-"<<endl;
 	cin>>m;
 	
-	graph directedGraph(true,n);
+	graph unDirectedGraph(n);
 	
 	for(int i = 0 ; i<m ; i++){
 		cout<<"u,v :-";
 		int u,v = 0;
 		cin>>u>>v;
-		directedGraph.addEdges(u,v);
-		//unDirectedGraph.addEdges(u,v);
+		//directedGraph.addEdges(u,v);
+		unDirectedGraph.addEdges(u,v);
 	}
 	
 	cout<<endl;
 	
-	directedGraph.printGraph();
-	cout<<endl;
+	//directedGraph.printGraph();
+	//cout<<endl;
 	//g.bfs();
 	//cout<<endl;
 	//g.dfs();
 	
-	//unDirectedGraph.printGraph();
-	//cout<<endl;
+	unDirectedGraph.printGraph();
+	cout<<endl;
 
 	//cout<<"is cycle dfs direct:"<<directedGraph.isCyclicDFS()<<endl;
 	//cout<<"is cycle dfs undirect:"<<unDirectedGraph.isCyclicDFS()<<endl;
@@ -48,6 +48,14 @@ int main(){
 	//	cout<<i<<" ";
 	//}
 	//cout<<endl;
-	cout<<directedGraph.isCyclicDirectedBFS()<<endl;
+	//cout<<directedGraph.isCyclicDirectedBFS()<<endl;
+	
+	vector<int> shortestPath = unDirectedGraph.shortestPathUndirected(0,4);
+	
+	for(auto i : shortestPath){
+		cout<<i<<" ";
+	}
+	cout<<endl;
+	
 	return 0;
 }

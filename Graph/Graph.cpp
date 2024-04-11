@@ -3,6 +3,7 @@
 #include <queue>
 #include <stack>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -232,5 +233,39 @@ class graph{
 				return false;
 			}
 			return true;
+		}
+		
+		vector<int> shortestPathUndirected(int s , int t){
+			unordered_map<int,bool> isVisited;
+			unordered_map<int,int> parent;
+			queue<int> q;
+			vector<int> ans;
+			
+			q.push(s);
+			isVisited[s] = true;
+			parent[s] = -1;
+
+			while(!q.empty()){
+				int front = q.front();
+				q.pop();
+				for(auto ele:adjList[front]){
+					if(!isVisited[ele]){
+						q.push(ele);
+						isVisited[ele] = true;
+						parent[ele] = front;
+					}
+				}
+			}
+
+			int target = t;
+
+			while(target!=-1){
+				ans.push_back(target);
+				target = parent[target];
+			}
+
+			reverse(ans.begin() , ans.end());
+
+			return ans;
 		}
 };
