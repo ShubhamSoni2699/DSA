@@ -52,6 +52,8 @@ _deps
 
 build-Debug/
 
+.ctagsd/
+
 .clang-format
 .clangd
 
