@@ -4,6 +4,7 @@
 #include <stack>
 #include <unordered_map>
 #include <vector>
+#include <limits.h>
 
 using namespace std;
 
@@ -327,4 +328,22 @@ public:
 
         return ans;
     }
+	
+	vector<int> shortestPathWeightedDirected(int src = 0){
+		vector<int> distance(this->nodes,INT_MAX);
+		distance[src] = 0;
+		vector<int> topSortBFS = topologicalSortBFS();
+		
+		for(auto i : topSortBFS){
+			if(i!=INT_MAX){
+				for(auto neighbour:weightedAdjList[i]){
+					if(distance[i] + neighbour.second < distance[neighbour.first]){
+						distance[neighbour.first] = distance[i] + neighbour.second;
+					}
+				}
+			}
+		}
+		
+		return distance;
+	}
 };
