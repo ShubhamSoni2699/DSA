@@ -58,9 +58,17 @@ private:
     void topSortDFS(int node, unordered_map<int, bool>& isVisited, stack<int>& st)
     {
         isVisited[node] = true;
-        for(auto neighbour : adjList[node]) {
-            if(!isVisited[neighbour]) {
-                topSortDFS(neighbour, isVisited, st);
+        if(isWeighted) {
+            for(auto neighbour : weightedAdjList[node]) {
+                if(!isVisited[neighbour.first]) {
+                    topSortDFS(neighbour.first, isVisited, st);
+                }
+            }
+        } else {
+            for(auto neighbour : adjList[node]) {
+                if(!isVisited[neighbour]) {
+                    topSortDFS(neighbour, isVisited, st);
+                }
             }
         }
         st.push(node);

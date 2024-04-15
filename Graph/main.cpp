@@ -37,20 +37,20 @@ int main()
     // cout<<"is cycle dfs direct:"<<directedGraph.isCyclicDFS()<<endl;
     // cout<<"is cycle dfs undirect:"<<unDirectedGraph.isCyclicDFS()<<endl;
 
-    // vector<int>topSort = directedGraph.topologicalSortDFS();
+     vector<int>topSortDFS = directedWeightedGraph.topologicalSortDFS();
      vector<int>topSortBFS = directedWeightedGraph.topologicalSortBFS();
     
      cout<<"Top sort DFS :- ";
+     for(auto i:topSortDFS){
+    	cout<<i<<" ";
+     }
+     cout<<endl;
+    
+     cout<<"Top sort BFS :- ";
      for(auto i:topSortBFS){
     	cout<<i<<" ";
      }
      cout<<endl;
-    //
-    // cout<<"Top sort BFS :- ";
-    // for(auto i:topSortBFS){
-    //	cout<<i<<" ";
-    // }
-    // cout<<endl;
     // cout<<directedGraph.isCyclicDirectedBFS()<<endl;
 
     // vector<int> shortestPath = unDirectedGraph.shortestPathUndirected(0, 4);
