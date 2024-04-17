@@ -1,10 +1,11 @@
 #include <algorithm>
 #include <iostream>
+#include <limits.h>
 #include <queue>
+#include <set>
 #include <stack>
 #include <unordered_map>
 #include <vector>
-#include <limits.h>
 
 using namespace std;
 
@@ -328,22 +329,49 @@ public:
 
         return ans;
     }
-	
-	vector<int> shortestPathWeightedDirected(int src = 0){
-		vector<int> distance(this->nodes,INT_MAX);
-		distance[src] = 0;
-		vector<int> topSortBFS = topologicalSortBFS();
-		
-		for(auto i : topSortBFS){
-			if(i!=INT_MAX){
-				for(auto neighbour:weightedAdjList[i]){
-					if(distance[i] + neighbour.second < distance[neighbour.first]){
-						distance[neighbour.first] = distance[i] + neighbour.second;
+
+    vector<int> shortestPathWeightedDirected(int src = 0)
+    {
+        vector<int> distance(this->nodes, INT_MAX);
+        distance[src] = 0;
+        vector<int> topSortBFS = topologicalSortBFS();
+
+        for(auto i : topSortBFS) {
+            if(i != INT_MAX) {
+                for(auto neighbour : weightedAdjList[i]) {
+                    if(distance[i] + neighbour.second < distance[neighbour.first]) {
+                        distance[neighbour.first] = distance[i] + neighbour.second;
+                    }
+                }
+            }
+        }
+
+        return distance;
+    }
+
+    vector<int> dijkstraShotestPath(int src = 0)
+    {
+        vector<int> distance(this->nodes, INT_MAX);
+        set<pair<int, int>> st;
+
+        distance[src] = 0;
+        st.insert(make_pair(0, src));
+
+        while(!st.empty()) {
+            pair<int, int> top = *(st.begin());
+            st.erase(st.begin());
+
+            for(auto neighbour : weightedAdjList[top.second]){
+				if(top.first + neighbour.second < distance[neighbour.first]){
+					auto record = st.find(make_pair(distance[neighbour.first],neighbour.first));
+					if(record!=st.end()){
+						st.erase(record);
 					}
+					distance[neighbour.first] = top.first + neighbour.second;
+					st.insert(make_pair(distance[neighbour.first],neighbour.first));
 				}
 			}
-		}
-		
-		return distance;
-	}
+        }
+        return distance;
+    }
 };
