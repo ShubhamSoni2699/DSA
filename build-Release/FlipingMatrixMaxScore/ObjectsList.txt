@@ -1,0 +1,1 @@
+../build-Release/FlipingMatrixMaxScore/main.cpp.o ../build-Release/FlipingMatrixMaxScore/FlipingMatrix.cpp.o

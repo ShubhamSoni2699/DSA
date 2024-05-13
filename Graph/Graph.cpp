@@ -361,16 +361,16 @@ public:
             pair<int, int> top = *(st.begin());
             st.erase(st.begin());
 
-            for(auto neighbour : weightedAdjList[top.second]){
-				if(top.first + neighbour.second < distance[neighbour.first]){
-					auto record = st.find(make_pair(distance[neighbour.first],neighbour.first));
-					if(record!=st.end()){
-						st.erase(record);
-					}
-					distance[neighbour.first] = top.first + neighbour.second;
-					st.insert(make_pair(distance[neighbour.first],neighbour.first));
-				}
-			}
+            for(auto neighbour : weightedAdjList[top.second]) {
+                if(top.first + neighbour.second < distance[neighbour.first]) {
+                    auto record = st.find(make_pair(distance[neighbour.first], neighbour.first));
+                    if(record != st.end()) {
+                        st.erase(record);
+                    }
+                    distance[neighbour.first] = top.first + neighbour.second;
+                    st.insert(make_pair(distance[neighbour.first], neighbour.first));
+                }
+            }
         }
         return distance;
     }

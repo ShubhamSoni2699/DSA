@@ -1,3 +1,7 @@
+/media/mr2608/0AB6E4D0B6E4BD77/Programming/C++/DSA/DSA/FlipingMatrixMaxScore/main.cpp
+/media/mr2608/0AB6E4D0B6E4BD77/Programming/C++/DSA/DSA/FlipingMatrixMaxScore/FlipingMatrix.cpp
+/media/mr2608/0AB6E4D0B6E4BD77/Programming/C++/DSA/DSA/AlgoForOptimalNoOfPieces/main.cpp
+/media/mr2608/0AB6E4D0B6E4BD77/Programming/C++/DSA/DSA/DynamicProgramming/main.cpp
 /media/mr2608/0AB6E4D0B6E4BD77/Programming/C++/DSA/DSA/Graph/main.cpp
 /media/mr2608/0AB6E4D0B6E4BD77/Programming/C++/DSA/DSA/Graph/Graph.cpp
 /media/mr2608/0AB6E4D0B6E4BD77/Programming/C++/DSA/DSA/Trie/main.cpp
