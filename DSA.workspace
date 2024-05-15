@@ -27,7 +27,8 @@
   <Project Name="Graph" Path="Graph/Graph.project" Active="No"/>
   <Project Name="DynamicProgramming" Path="DynamicProgramming/DynamicProgramming.project" Active="No"/>
   <Project Name="AlgoForOptimalNoOfPieces" Path="AlgoForOptimalNoOfPieces/AlgoForOptimalNoOfPieces.project" Active="No"/>
-  <Project Name="FlipingMatrixMaxScore" Path="FlipingMatrixMaxScore/FlipingMatrixMaxScore.project" Active="Yes"/>
+  <Project Name="FlipingMatrixMaxScore" Path="FlipingMatrixMaxScore/FlipingMatrixMaxScore.project" Active="No"/>
+  <Project Name="GetMaximumGold" Path="GetMaximumGold/GetMaximumGold.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -59,6 +60,7 @@
       <Project Name="DynamicProgramming" ConfigName="Debug"/>
       <Project Name="AlgoForOptimalNoOfPieces" ConfigName="Debug"/>
       <Project Name="FlipingMatrixMaxScore" ConfigName="Debug"/>
+      <Project Name="GetMaximumGold" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -90,6 +92,7 @@
       <Project Name="DynamicProgramming" ConfigName="Release"/>
       <Project Name="AlgoForOptimalNoOfPieces" ConfigName="Release"/>
       <Project Name="FlipingMatrixMaxScore" ConfigName="Release"/>
+      <Project Name="GetMaximumGold" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
